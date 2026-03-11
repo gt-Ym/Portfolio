@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Works - ポートフォリオサイト</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link href="index.css" rel="stylesheet" type="text/css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/css/lightbox.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/js/lightbox.min.js" type="text/javascript"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="starter-template">
+
+        <nav>
+          <ul class="menu">
+            <li class="menu"><a href="index.html#profile">Profile</a></li>
+            <li class="menu"><a href="index.html#skill">Skill</a></li>
+            <li class="menu"><a href="works.html">Works</a></li>
+            <li class="menu"><a href="mailto:gt.yama12@gmail.com">Contact</a></li>
+          </ul>
+        </nav>
+
+        <div class="works">
+          <h2 class="workstitle" id="works">Works</h2>
+          <div class="col-md-6">
+            <div class="worksname">
+              <h2 style="background-color:#fdffa2;">バーチャル空間における<br>現実空間の自由歩行システム</h2>
+              <a href="imgs/Demo.mp4" data-lightbox="group"><video controls src="imgs/Demo.mp4"></a>
+              <p class="explain" style="font-size: 20px; padding-top: 15px;">UnityとMetaQuestを用いて、撮影した360度画像をバーチャル空間に表示<br>画像を格子状に撮影して座標を設定し<br>HMDの位置座標と連動させることで平面上に自由な歩行体験が可能</p>
+              <a style="color:#2600ff;" href="https://github.com/gotouyamato/MetaSightseeing">githubでメインのソースコードを公開</a>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="worksname">
+              <h2 style="background-color:#fdffa2;">ドラゴンクエストX<br>モンスター検索システム</h2>
+              <a href="imgs/dorakue.png" data-lightbox="group"><img src="imgs/dorakue.png"></a>
+              <p class="explain" style="font-size: 20px; padding-top: 15px;">ドラゴンクエストXのモンスターの情報を検索するシステム<br>psqlを用いて、モンスターの名前、系統、経験値、Goldの情報をデータベースに記載し、それぞれの属性からモンスターを検索できる
+              </p>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="worksname">
+              <h2 style="background-color:#fdffa2;">すごろく最善ルート<br>選択システム</h2>
+              <a href="imgs/sugoroku.png" data-lightbox="group"><img src="imgs/sugoroku.png"></a>
+              <p class="explain" style="font-size: 20px; padding-top: 15px;">PythonのNetworkxを用いてすごろくのようなネットワークを形成<br>ノードごとに得点を設定し、1~3までランダムで進み合計得点を調べる<br>ランダムウォークで10000回シミュレーションを行い、一番得点が多いルートを出力する</p>
+              <a style="color:#2600ff;" href="https://github.com/gotouyamato/SugorokuNetwork/tree/main">githubでソースコードを公開</a>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="worksname">
+              <h2 style="background-color:#fdffa2;">5Battle<br>カンタン心理カードゲーム</h2>
+              <a href="https://unityroom.com/games/5battle_game"><img src="imgs/5battle.png"></a>
+              <p class="explain" style="font-size: 20px; padding-top: 15px;">Unityを用いて手軽に遊べるカードゲームを作成した<br>1～5の数字と人間、悪魔、天使の3つの職業を組み合わせたシンプルな心理カードバトルゲーム<br>出したカードの数字の大きさや、職業の相性によって勝敗が決まる<br>unityroomで公開しているので画像クリックでリンクに飛ぶことが可能</p>
+              <a style="color:#2600ff;" href="https://github.com/gotouyamato/5Battle">githubでソースコードを公開</a>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="worksname">
+              <h2 style="background-color:#fdffa2;">環境データを用いた<br>インタラクティブなシステム</h2>
+              <a href="imgs/rousoku.mov" data-lightbox="group"><video controls src="imgs/rousoku.mov"></a>
+              <p class="explain" style="font-size: 20px; padding-top: 15px;">Processingを用いたインタラクティブなシステム<br>Science Journalを用いて光量データをCSVデータで格納し、それに応じて背景の明るさを変更。<br>クリックで蝋燭を光らせ、暗いときにクリックするとOKの文字が出る</p>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="worksname">
+              <h2 style="background-color:#fdffa2;">GW円滑チャット<br>掲示板システム</h2>
+              <a href="imgs/gwchat.png" data-lightbox="group"><img src="imgs/gwchat.png"></a>
+              <p class="explain" style="font-size: 20px; padding-top: 15px;">グループワークなどの議論を円滑に進めるためのシステム<br>アイデア、実装方法、役割分担を掲示板形式で匿名投稿し、5段階での投票による多数決で提案を決定する</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <footer>©︎2021 Yamato Goto</footer>
+  </body>
+</html>
