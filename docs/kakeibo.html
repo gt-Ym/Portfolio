@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>家計簿アプリ - Works</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link href="index.css" rel="stylesheet" type="text/css">
+    <style>
+      .kakeibo-detail {
+        padding: 30px 0;
+      }
+      .kakeibo-detail h1 {
+        font-size: 32px;
+        margin-bottom: 6px;
+      }
+      .kakeibo-detail .subtitle {
+        font-size: 16px;
+        color: #555;
+        margin-bottom: 24px;
+      }
+
+      /* メタテーブル */
+      .meta-table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+      .meta-table th, .meta-table td {
+        padding: 10px 14px;
+        border: 1px solid #ddd;
+        font-size: 15px;
+        vertical-align: top;
+      }
+      .meta-table th {
+        background-color: #f5f5f5;
+        width: 120px;
+        font-weight: bold;
+        white-space: nowrap;
+      }
+
+      /* デモ動画 */
+      .demo-video {
+        width: 100%;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+
+      /* セクション見出し */
+      .section-title {
+        font-size: 22px;
+        font-weight: bold;
+        margin-top: 36px;
+        margin-bottom: 12px;
+        border-left: 5px solid #3399ff;
+        padding-left: 12px;
+        color: #004085;
+      }
+
+      /* 概要・機能テキスト */
+      .overview-text {
+        font-size: 16px;
+        line-height: 1.9;
+      }
+      .feature-list {
+        font-size: 16px;
+        line-height: 2.2;
+        padding-left: 20px;
+      }
+
+      /* スクリーンショット行 */
+      .screenshot-row {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 30px;
+        border-bottom: 1px solid #e8e8e8;
+        padding-bottom: 28px;
+      }
+      .screenshot-row:last-child {
+        border-bottom: none;
+      }
+      .screenshot-desc {
+        flex: 0 0 38%;
+        padding-right: 24px;
+      }
+      .screenshot-desc h4 {
+        font-size: 17px;
+        font-weight: bold;
+        margin-bottom: 8px;
+        color: #004085;
+      }
+      .screenshot-desc p {
+        font-size: 14px;
+        color: #444;
+        line-height: 1.7;
+        margin: 0;
+      }
+      .screenshot-img {
+        flex: 0 0 62%;
+      }
+      .screenshot-img img {
+        width: 100%;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+
+      .back-link {
+        display: inline-block;
+        margin-top: 36px;
+        font-size: 16px;
+        color: #2600ff;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="starter-template">
+
+        <nav>
+          <ul class="menu">
+            <li class="menu"><a href="index.html#profile">Profile</a></li>
+            <li class="menu"><a href="index.html#skill">Skill</a></li>
+            <li class="menu"><a href="index.html#works">Works</a></li>
+            <li class="menu"><a href="mailto:gt.yama12@gmail.com">Contact</a></li>
+          </ul>
+        </nav>
+
+        <div class="kakeibo-detail">
+          <h1>家計簿アプリ</h1>
+          <p class="subtitle">Firebase・GAS を活用したWebベースの家計簿管理アプリ</p>
+
+          <!-- メタ情報 + デモ動画 -->
+          <div class="row">
+            <div class="col-md-6">
+              <table class="meta-table">
+                <tr>
+                  <th>実装期間</th>
+                  <td>約1か月</td>
+                </tr>
+                <tr>
+                  <th>使用言語</th>
+                  <td>HTML / CSS / JavaScript</td>
+                </tr>
+                <tr>
+                  <th>使用技術</th>
+                  <td>
+                    Firebase Authentication<br>
+                    Firebase Firestore<br>
+                    Firebase Hosting<br>
+                    Chart.js<br>
+                    GAS（Google Apps Script）<br>
+                    LINE Messaging API
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="col-md-6">
+              <p style="font-weight:bold; margin-bottom:6px;">デモ動画</p>
+              <video class="demo-video" controls>
+                <source src="imgs/kakeibo/kakeibo_demo.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+
+          <!-- 概要 -->
+          <h2 class="section-title">概要</h2>
+          <p class="overview-text">
+            Firebase を利用したWebアプリの家計簿管理システムです。<br>
+            メール/パスワード認証によるログイン機能を持ち、収支の記録・予算の設定・定期購入の管理などを一元管理できます。<br>
+            Chart.js を用いた収支グラフによりデータを視覚的に確認でき、月ごとの支出傾向を把握することができます。<br>
+            GAS のトリガー機能を活用し、定期購入（サブスクリプション）の自動登録を実装しています。<br>
+            また、月の支出が設定した予算を超えた際に LINE Messaging API を通じて LINE に通知が届く機能も実装しています。
+          </p>
+
+          <!-- 主な機能 -->
+          <h2 class="section-title">主な機能</h2>
+          <ul class="feature-list">
+            <li>メール/パスワードによるユーザー認証（Firebase Authentication）</li>
+            <li>収入・支出の記録（カテゴリ別管理）</li>
+            <li>月別予算の設定と管理</li>
+            <li>定期購入（サブスクリプション）の登録・一覧・削除</li>
+            <li>GAS トリガーによるサブスクリプションの自動登録</li>
+            <li>予算超過時の LINE 通知（LINE Messaging API）</li>
+            <li>給与情報の管理</li>
+            <li>収支データのグラフ可視化（Chart.js）</li>
+            <li>履歴の検索・管理</li>
+          </ul>
+
+          <!-- スクリーンショット -->
+          <h2 class="section-title">スクリーンショット</h2>
+
+          <div class="screenshot-row">
+            <div class="screenshot-desc">
+              <h4>メインメニュー</h4>
+              <p>
+                カード型グリッドレイアウトで8つの機能へ素早くアクセスできるナビゲーション画面。<br>
+                収入・支出・チャージの入力、履歴検索、定期購入管理、給与入力、予算管理の各ページへ遷移できる。<br>
+                管理者アカウントでログインするとマスター管理メニューも表示される。
+              </p>
+            </div>
+            <div class="screenshot-img">
+              <img src="imgs/kakeibo/1.png" alt="メインメニュー">
+            </div>
+          </div>
+
+          <div class="screenshot-row">
+            <div class="screenshot-desc">
+              <h4>データ履歴検索・管理画面</h4>
+              <p>
+                年月・カテゴリ（収入／支出／チャージ）・項目・決済方法・金額範囲での絞り込み検索が可能。<br>
+                日付新順/古順・金額高順/低順の並び替えにも対応。<br>
+                各行からインライン編集・削除ができ、グループ共有データと自分のデータを区別して表示する。
+              </p>
+            </div>
+            <div class="screenshot-img">
+              <img src="imgs/kakeibo/2.png" alt="データ履歴検索・管理画面">
+            </div>
+          </div>
+
+          <div class="screenshot-row">
+            <div class="screenshot-desc">
+              <h4>グラフ・データ分析画面</h4>
+              <p>
+                Chart.js を用いて収支データを可視化する分析画面。<br>
+                収入・支出・チャージ・収支バランスの4種類をカルーセルで切り替え表示し、カテゴリ別の円グラフ・決済方法別のドーナツグラフ・日別/月別の折れ線グラフを確認できる。<br>
+                スワイプ操作にも対応し、月次集計データを元に高速表示する。
+              </p>
+            </div>
+            <div class="screenshot-img">
+              <img src="imgs/kakeibo/3.png" alt="グラフ・データ分析画面">
+            </div>
+          </div>
+
+          <div class="screenshot-row">
+            <div class="screenshot-desc">
+              <h4>給与入力画面</h4>
+              <p>
+                基本給・各種手当・社会保険料などを一括で入力できる画面。<br>
+                デフォルトで8行（収入系5行・控除系3行）が用意されており、行の追加・削除・ドラッグ&ドロップによる並び替えが可能。<br>
+                「前回の入力を反映」ボタンにより localStorage に保存した前回の内容を即座に復元でき、毎月の入力を効率化できる。
+              </p>
+            </div>
+            <div class="screenshot-img">
+              <img src="imgs/kakeibo/4.png" alt="給与入力画面">
+            </div>
+          </div>
+
+          <div class="screenshot-row">
+            <div class="screenshot-desc">
+              <h4>定期購入管理画面</h4>
+              <p>
+                収入・支出・チャージのサブスクリプションを登録・管理する画面。<br>
+                項目・決済方法・金額・開始日・頻度（日次／週次／月次／年次）を設定すると次回購入日が自動計算される。<br>
+                登録データは GAS スプレッドシートと連携し、GAS の日次トリガーにより設定した頻度で自動的に収支へ計上される。
+              </p>
+            </div>
+            <div class="screenshot-img">
+              <img src="imgs/kakeibo/5.png" alt="定期購入管理画面">
+            </div>
+          </div>
+
+          <div class="screenshot-row">
+            <div class="screenshot-desc">
+              <h4>予算管理画面</h4>
+              <p>
+                収入・支出・チャージのタブを切り替えて項目ごとに月別予算を設定できる画面。<br>
+                実績と目標をプログレスバーで比較表示し、支出が予算の80%を超えると橙色、超過すると赤色で警告する。<br>
+                支出が予算を超えた際は LINE Messaging API を通じて LINE に自動通知が届く。
+              </p>
+            </div>
+            <div class="screenshot-img">
+              <img src="imgs/kakeibo/6.png" alt="予算管理画面">
+            </div>
+          </div>
+
+          <a class="back-link" href="index.html#works">← Works 一覧に戻る</a>
+        </div>
+
+      </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <footer>©︎2021 Yamato Goto</footer>
+  </body>
+</html>
